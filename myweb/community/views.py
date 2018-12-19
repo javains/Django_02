@@ -7,6 +7,7 @@ def write(request):
         form = Form(request.POST)
         if form.is_valid():
             form.save()
+
     else:
         form = Form()
     return render(request,'write.html',{'form':form})
